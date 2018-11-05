@@ -1,5 +1,7 @@
 const ToDo = function () {
     this.tasks = []
+
+    this.render()
 }
 
 ToDo.prototype.addTask = function (text) {
@@ -37,6 +39,6 @@ ToDo.prototype.makeUI = function () {
 }
 
 const newTask1 = new ToDo()
-newTask1.addTask('task1111')
+
 
 
