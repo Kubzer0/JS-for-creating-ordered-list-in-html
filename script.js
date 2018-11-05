@@ -9,12 +9,13 @@ ToDo.prototype.addTask = function (text) {
 
 ToDo.prototype.render = function () {
     document.body.innerHTML = ''
+    const orderedList = document.createElement('ol')
     this.tasks.forEach(task => {
-        const taskDiv = document.createElement('div')
-        const taskText = document.createTextNode(task.text)
-        taskDiv.appendChild(taskText)
-        document.body.appendChild(taskDiv)
+        const taskLi = document.createElement('li')
+        taskLi.innerText= task.text
+        orderedList.appendChild(taskLi)
     })
+    document.body.appendChild(orderedList)
 }
 
 function Task(text) {
